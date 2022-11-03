@@ -182,7 +182,7 @@ class _TodoListPageState extends State<TodoListPage> {
             style: TextButton.styleFrom(
               backgroundColor: Color(0xff422680),
             ),
-            child: const Text('Cancelar'),
+            child: const Text('Cancelar',style: TextStyle(color: Colors.white),),
           ),
           TextButton(
             onPressed: () {
@@ -195,7 +195,7 @@ class _TodoListPageState extends State<TodoListPage> {
             style: TextButton.styleFrom(
               backgroundColor: Colors.red,
             ),
-            child: const Text('Excluir'),
+            child: const Text('Excluir',style: TextStyle(color: Colors.white),),
           ),
         ],
       ),
