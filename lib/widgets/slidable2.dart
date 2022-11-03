@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:todolist/models/todo.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -14,18 +14,15 @@ class TodoListItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: Slidable(
-        actionPane: const SlidableStrechActionPane(),
-        actionExtentRatio: 0.25,
-        secondaryActions: [
-          IconSlideAction(
-            color:Colors.red,
-            onTap: (){
-              onDelete(todo);
-            },
+        endActionPane: ActionPane(motion: const ScrollMotion(),extentRatio: 0.25, children: [
+          SlidableAction(
+            onPressed: onDelete(todo),
+            backgroundColor: Color(0xFFFE4A49),
+            foregroundColor: Colors.white,
             icon: Icons.delete,
-            caption: 'Delete',
+            label: 'Delete',
           ),
-        ],
+        ]),
         child: Container(
           color: Colors.grey[200],
           padding: const EdgeInsets.all(16),
@@ -33,13 +30,13 @@ class TodoListItem extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Text(
               DateFormat('dd/MM/yyyy - EE').format(todo.dateTime),
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 12,
               ),
             ),
             Text(
               todo.title,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
           ]),
         ),
@@ -47,3 +44,4 @@ class TodoListItem extends StatelessWidget {
     );
   }
 }
+ */
